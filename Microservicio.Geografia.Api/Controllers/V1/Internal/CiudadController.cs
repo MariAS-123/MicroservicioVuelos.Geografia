@@ -1,6 +1,11 @@
-﻿namespace Microservicio.Geografia.Api.Controllers.V1.Internal
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Microservicio.Geografia.Api.Controllers.V1.Internal
 {
-    public class CiudadController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CiudadController : ControllerBase
     {
     }
 }
