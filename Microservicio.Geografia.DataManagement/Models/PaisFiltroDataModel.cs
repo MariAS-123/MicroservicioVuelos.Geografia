@@ -1,10 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Microservicio.Geografia.DataManagement.Models;
 
-namespace Microservicio.Geografia.DataManagement.Models
+public class PaisFiltroDataModel
 {
-    internal class PaisFiltroDataModel
-    {
-    }
+    public string? Nombre { get; set; }
+
+    public string? CodigoIso2 { get; set; }
+
+    public string? CodigoIso3 { get; set; }
+
+    public string? Continente { get; set; }
+
+    public string? Estado { get; set; }
+
+    public bool IncluirEliminados { get; set; } = false;
+
+    public int PaginaActual { get; set; } = 1;
+
+    public int TamanoPagina { get; set; } = 10;
 }

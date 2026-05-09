@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Microservicio.Geografia.Business.Exceptions;
 
-namespace Microservicio.Geografia.Business.Exceptions
+public class UnauthorizedBusinessException : BusinessException
 {
-    internal class UnauthorizedBusinessException
+    public UnauthorizedBusinessException(string message)
+        : base("UNAUTHORIZED", message, 401)
     {
     }
 }

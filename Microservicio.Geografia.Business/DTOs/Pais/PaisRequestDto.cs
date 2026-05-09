@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Microservicio.Geografia.Business.DTOs.Pais;
 
-namespace Microservicio.Geografia.Business.DTOs.Pais
+public class PaisRequestDto
 {
-    internal class PaisRequestDto
-    {
-    }
+    public string CodigoIso2 { get; set; } = null!;
+
+    public string? CodigoIso3 { get; set; }
+
+    public string Nombre { get; set; } = null!;
+
+    public string? Continente { get; set; }
 }

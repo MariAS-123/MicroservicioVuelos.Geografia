@@ -1,10 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace Microservicio.Geografia.Business.DTOs.Ciudad;
 
-namespace Microservicio.Geografia.Business.DTOs.Ciudad
+public class CiudadRequestDto
 {
-    internal class CiudadRequestDto
-    {
-    }
+    public int IdPais { get; set; }
+
+    public string Nombre { get; set; } = null!;
+
+    public string? CodigoPostal { get; set; }
+
+    public string? ZonaHoraria { get; set; }
+
+    public decimal? Latitud { get; set; }
+
+    public decimal? Longitud { get; set; }
 }
