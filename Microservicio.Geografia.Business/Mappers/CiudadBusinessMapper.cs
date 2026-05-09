@@ -15,8 +15,8 @@ public static class CiudadBusinessMapper
             CodigoPostal = dto.CodigoPostal,
             ZonaHoraria = dto.ZonaHoraria,
             Estado = dto.Estado,
-            PaginaActual = dto.PaginaActual,
-            TamanoPagina = dto.TamanoPagina
+            PaginaActual = dto.Page,
+            TamanoPagina = dto.PageSize
         };
     }
 

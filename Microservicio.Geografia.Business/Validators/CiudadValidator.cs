@@ -80,13 +80,13 @@ public class CiudadValidator
             }
         }
 
-        if (dto.PaginaActual <= 0)
+        if (dto.Page <= 0)
         {
             errors.Add(
                 "La página actual debe ser mayor que 0.");
         }
 
-        if (dto.TamanoPagina <= 0 || dto.TamanoPagina > 200)
+        if (dto.PageSize <= 0 || dto.PageSize > 200)
         {
             errors.Add(
                 "El tamaño de página debe estar entre 1 y 200.");

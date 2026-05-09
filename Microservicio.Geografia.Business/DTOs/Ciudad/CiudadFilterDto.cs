@@ -1,18 +1,27 @@
-﻿namespace Microservicio.Geografia.Business.DTOs.Ciudad;
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace Microservicio.Geografia.Business.DTOs.Ciudad;
 
 public class CiudadFilterDto
 {
+    [FromQuery(Name = "id_pais")]
     public int? IdPais { get; set; }
 
+    [FromQuery(Name = "nombre")]
     public string? Nombre { get; set; }
 
+    [FromQuery(Name = "codigo_postal")]
     public string? CodigoPostal { get; set; }
 
+    [FromQuery(Name = "zona_horaria")]
     public string? ZonaHoraria { get; set; }
 
+    [FromQuery(Name = "estado")]
     public string? Estado { get; set; }
 
-    public int PaginaActual { get; set; } = 1;
+    [FromQuery(Name = "page")]
+    public int Page { get; set; } = 1;
 
-    public int TamanoPagina { get; set; } = 20;
+    [FromQuery(Name = "page_size")]
+    public int PageSize { get; set; } = 20;
 }
