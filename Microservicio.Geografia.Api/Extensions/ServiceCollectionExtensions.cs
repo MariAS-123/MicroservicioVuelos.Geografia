@@ -52,7 +52,7 @@ public static class ServiceCollectionExtensions
             throw new InvalidOperationException(
                 $"La cadena de conexión '{ConnectionStringName}' no está configurada.");
         }
-
+        /*
         services.AddDbContext<GeografiaDbContext>(options =>
             {
                 options.UseNpgsql(
@@ -64,7 +64,12 @@ public static class ServiceCollectionExtensions
                             maxRetryDelay: TimeSpan.FromSeconds(10),
                             errorCodesToAdd: null);
                     });
-            });
+            });*/
+
+        services.AddDbContext<GeografiaDbContext>(options =>
+        {
+            options.UseNpgsql(connectionString);
+        });
     }
 
     private static void RegisterRepositoriesByConvention(
